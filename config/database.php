@@ -48,7 +48,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'BancoAPI'),
+            'database' => env('DB_DATABASE', 'BancoApi'),
             'username' => env('DB_USERNAME', 'leo'),
             'password' => env('DB_PASSWORD', '159753@Cd'),
             'unix_socket' => env('DB_SOCKET', ''),

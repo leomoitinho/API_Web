@@ -35,3 +35,7 @@ iniciar servidor para teste de GraphQL
 
     php artisan serve
 
+Acessar a pagina para teste ou usar o GraphQL Playground
+
+    http://localhost:8000/graphql-playground
+
