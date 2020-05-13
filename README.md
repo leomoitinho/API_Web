@@ -8,15 +8,15 @@
 </p>
 
 
-Apos clonar o projeto
+Após clonar o projeto
 
-Dentro do diretorio
+Dentro do diretório
 
 Instalar as dependencias
 
     composer install
 
-Criar o Banco de dados, usuario e senha no Mysql, depois ajustar as configurações em 
+Criar o Banco de dados, usuário e senha no Mysql, depois ajustar as configurações em 
 /config/database.php
 
     'database' => env('DB_DATABASE', 'BASE DE DADOS AQUI'),
@@ -26,12 +26,14 @@ Criar o Banco de dados, usuario e senha no Mysql, depois ajustar as configuraç�
 Incluir as tabelas
 
     php artisan migrate
+    digite "yes" para continuar
 
 Incluir os dados para teste
 
     php db:seed
+    digite "yes" para continuar
 
-iniciar servidor para teste de GraphQL
+Iniciar servidor para teste de GraphQL
 
     php artisan serve
 
