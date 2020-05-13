@@ -4,6 +4,7 @@ namespace App\GraphQL\Mutations;
 
 use GraphQL\Type\Definition\ResolveInfo;
 use Nuwave\Lighthouse\Support\Contracts\GraphQLContext;
+use App\Contas;
 
 class Depositar
 {
@@ -16,6 +17,14 @@ class Depositar
      * @param  \GraphQL\Type\Definition\ResolveInfo  $resolveInfo Information about the query itself, such as the execution state, the field name, path to the field from the root, and more.
      * @return mixed
      */
+    public function args(): array
+    {
+        return [
+            'conta' => ['name' => 'conta', 'type' => Type::string()],
+            'valor' => ['name' => 'valor', 'type' => Type::float()]
+        ];
+    }
+
     public function __invoke($rootValue, array $args, GraphQLContext $context, ResolveInfo $resolveInfo)
     {
         $conta = \App\Contas::where('conta', $args['conta'])->first();
@@ -25,7 +34,13 @@ class Depositar
         } 
         $valor1 = $conta->saldo;
         $valor2 = $args['valor'];
+        if ($valor2 < 0) {
+            return new Error("Error");
+        }
         $total = number_format(($valor1 + $valor2), 2, '.','');
+        if ($total < 0) {
+            throw new Error("Error");
+        }
         $conta->saldo = $total;
         $conta->save();
 

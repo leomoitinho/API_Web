@@ -37,11 +37,11 @@ class Sacar
         $valor1 = $conta->saldo;
         $valor2 = $args['valor'];
         if ($valor2 < 0) {
-            return new Error("Nao deu");
+            return new Error("Error");
         }
         $total = number_format(($valor1 - $valor2), 2, '.','');
         if ($total < 0) {
-            throw new Error("email not in proper format");
+            throw new Error("Error");
         }
         $conta->saldo = $total;
         $conta->save();
