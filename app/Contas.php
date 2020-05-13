@@ -9,5 +9,4 @@ class Contas extends Model
     protected $fillable = [
         'conta', 'saldo',
     ];
-
 }

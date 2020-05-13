@@ -13,43 +13,40 @@ class ContasTableSeeder extends Seeder
     {
         \App\Contas::truncate();
 
-        //$faker = \Faker\Factory::create();
-        //$password = bcrypt('secret');
-
         \App\Contas::create([
-            'conta'     => '3542613736400929',
+            'conta'     => '35426137',
             'saldo'    => 5111.18,
         ]);
         \App\Contas::create([
-            'conta'     => '5002358666761555',
+            'conta'     => '50023586',
             'saldo'    => 2692.13,
         ]);
         \App\Contas::create([
-            'conta'     => '6334298212212157',
+            'conta'     => '63342982',
             'saldo'    => 1413.57,
         ]);
         \App\Contas::create([
-            'conta'     => '3566692756616896',
+            'conta'     => '35666927',
             'saldo'    => 4283.82,
         ]);
         \App\Contas::create([
-            'conta'     => '3534429276944915',
+            'conta'     => '35344292',
             'saldo'    => 6075.82,
         ]);
         \App\Contas::create([
-            'conta'     => '5602230677353868',
+            'conta'     => '56022306',
             'saldo'    => 7081.26,
         ]);
         \App\Contas::create([
-            'conta'     => '63047130883535492',
+            'conta'     => '63047130',
             'saldo'    => 8803.54,
         ]);
         \App\Contas::create([
-            'conta'     => '6762912045796191',
+            'conta'     => '67629120',
             'saldo'    => 8453.76,
         ]);
         \App\Contas::create([
-            'conta'     => '3571915896135854',
+            'conta'     => '35719158',
             'saldo'    => 7486.64,
         ]);
 
